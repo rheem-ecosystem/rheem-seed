@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+repository=$1
+branch=$2
+
+# get the current user
+user=$(gh api /user | jq -r .login)
+
+#fork the repository
+## TODO: add the validation of the fork is already created
+gh repo fork ${repository} --clone=false || true
+
+# get the real repo to clone
+real_repo=$(echo ${repository} | sed "s/rheem-ecosystem/${user}/")
+name_repo=$(echo ${repository} | sed -E "s/rheem-ecosystem\/(.*)/\1/")
+
+# clone the repository forked and add as submodule inside of rheem
+git submodule add https://github.com/${real_repo} || true
+
+pom="pom.xml.base"
+if [ -f "pom.xml" ]; then
+    pom="pom.xml"
+fi
+
+cat ${pom} | sed  -E "s/(Modules Here(.*$))/\1\n\t\t\<module\>${name_repo}\<\/module\>/" > pom.xml.tmp
+
+mv pom.xml.tmp pom.xml
+
+
+
+

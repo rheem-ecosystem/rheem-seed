@@ -8,7 +8,8 @@ time.
 The software requirement that you will need is on the list below:
  - Git
  - Github Cli
- 
+ - Jq command (download instructions [here](https://stedolan.github.io/jq/download/))
+ - sed command, if you are in mac please check to have installed `brew install gnu-sed` and the alias to `sed` if is need it
  
 ## Steps
 

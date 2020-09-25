@@ -1,3 +1,31 @@
 #!/usr/bin/env bash
 
+function remove_comments(){
+  cat $1 | grep -v '^#' | grep -v -e '^$'
+}
 
+function create_backup(){
+  file_base=$1
+  if [ ! -f $file_base ]; then
+    return 0
+  fi
+  bkp_name="${file_base}.bkp.$(date +"%Y%m%d%H%M%s")"
+  cp $file_base $bkp_name
+}
+
+function delete_w_backup(){
+  file_base=$1
+  if [ ! -f $file_base ]; then
+    return 0
+  fi
+  create_backup $file_base
+  rm -rf $file_base
+}
+
+delete_w_backup pom.xml
+
+for i j in $(remove_comments modules)
+do
+  echo "here $i  $j"
+  ./rheem_add $i $j
+done
