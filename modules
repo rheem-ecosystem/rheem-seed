@@ -1,0 +1,34 @@
+## Rheem Core
+
+rheem-ecosystem/rheem
+
+## API of Rheem
+
+#rheem-ecosystem/rheem-api-python
+#rheem-ecosystem/rheem-api-scala-java
+
+## processing platforms
+
+#rheem-ecosystem/rheem-java
+#rheem-ecosystem/rheem-spark
+#rheem-ecosystem/rheem-flink
+
+## JDBC platforms
+
+#rheem-ecosystem/rheem-jdbc-template
+#rheem-ecosystem/rheem-sqlite3
+#rheem-ecosystem/rheem-postgres
+
+## Graph Platforms
+
+#rheem-ecosystem/rheem-graphchi
+#rheem-ecosystem/rheem-giraph
+
+## Others Packages
+
+#rheem-ecosystem/rheem-extensions
+#rheem-ecosystem/rheem-profiler
+
+## Testing Packages
+
+#rheem-ecosystem/rheem-tests-integration
