@@ -1,19 +1,11 @@
-# Rheem Seed
+# Rheem has been transfer to Apache Incubator and rename as [Wayang](https://wayang.apache.org)
 
-`rheem-seed` is a base structure of the folder of contribution on several repositories of Rheem-Ecosystem at the same 
-time.
+<img src="./logo_rheem.png" style="width:200px"> ==> <img src="./logo_wayang.png" style="width:200px">
 
-## Requirements
+You can find the latest version of the source code [inside the Apache Wayang repository](https://gitbox.apache.org/repos/asf?s=incubator-wayang), where it will continue to be developed.
 
-The software requirement that you will need is on the list below:
- - Git
- - Github Cli
- - Jq command (download instructions [here](https://stedolan.github.io/jq/download/))
- - sed command, if you are in mac please check to have installed `brew install gnu-sed` and the alias to `sed` if is need it
- 
-## Steps
+Please report any bugs to the [Jira issue tracker](https://issues.apache.org/jira/projects/WAYANG) directly.
 
-1. Login at you github account using the Github Cli (you can see how to log following the instructure that appears [here](https://cli.github.com/manual/gh_auth_login))
-2. Edit the file `modules`, remove the `#` from the module that you work. They will be incorporated on the repository
-3. run the script `rheem create`
-4. start working with your code as usual you do it
+An archive of the source code before the merge is available [here](../../tree/archive).
+
+This repository got deprecated and it was not incorporated on Apache Wayang, because wayang in only one repository
